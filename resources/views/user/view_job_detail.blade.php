@@ -8,23 +8,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-      /* Custom CSS for padding and margin */
-      .custom-container {
-          padding: 20px; /* Adjust as needed */
-          margin: 10px; /* Adjust as needed */
-          background-color: #f8f9fa; /* Add a background color */
-          border: 1px solid #ccc; /* Add a border for better separation */
-          border-radius: 5px; /* Add rounded corners */
+      body {
+          background-color: #f8f9fa;
+          padding: 20px;
       }
-  
-      /* Style for headings */
+
       .section-title {
-          font-size: 24px;
+          font-size: 28px;
+          color: #007bff;
           font-weight: bold;
       }
-  
-      .job-detail-info {
-          font-size: 16px;
+
+      .container {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 20px;
+      }
+
+      .custom-card {
+          width: 70%; 
+          margin: 0 auto; 
       }
   </style>
     <title>Hello, world!</title>
@@ -32,44 +35,56 @@
   <body>
     <div class="container mt-4">
         <div class="row">
-    
-            <div class="col-md-6">
+            <div class="col-md-12 custom-card">
                 <h1 class="section-title">Job Detail Page</h1>
-                <h4 class="job-detail-info">Job Title</h4>
-                <h4 class="job-detail-info">Company Name</h4>
-                <h4 class="job-detail-info">Company Location</h4>
-                <h4 class="job-detail-info">Job Type</h4>
-                <h4 class="job-detail-info">Job Description</h4>
-                <h4 class="job-detail-info">Qualification</h4>
-                <h4 class="job-detail-info">Experience</h4>
-                <h4 class="job-detail-info">Application Deadline</h4>
-                <h4 class="job-detail-info">Contact Info</h4>
-            </div>
-            <div class="col-md-6">
-                <h1 class="section-title">Job Details</h1>
-                <h4 class="job-detail-info">{{$job->job_title}}</h4>
-                <h4 class="job-detail-info">{{$job->company_name}}</h4>
-                <h4 class="job-detail-info">{{$job->company_location}}</h4>
-                <h4 class="job-detail-info">{{$job->job_type}}</h4>
-                <h4 class="job-detail-info">{{$job->job_desc}}</h4>
-                <h4 class="job-detail-info">{{$job->qualification}}</h4>
-                <h4 class="job-detail-info">{{$job->experience}}</h4>
-                <h4 class="job-detail-info">{{$job->application_deadline}}</h4>
-                <h4 class="job-detail-info">{{$job->contact_info}}</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Job Title:</th>
+                            <td>{{$job->job_title}}</td>
+                        </tr>
+                        <tr>
+                            <th>Company Name:</th>
+                            <td>{{$job->company_name}}</td>
+                        </tr>
+                        <tr>
+                            <th>Company Location:</th>
+                            <td>{{$job->company_location}}</td>
+                        </tr>
+                        <tr>
+                            <th>Job Type:</th>
+                            <td>{{$job->job_type}}</td>
+                        </tr>
+                        <tr>
+                            <th>Job Description:</th>
+                            <td>{{$job->job_desc}}</td>
+                        </tr>
+                        <tr>
+                            <th>Qualification:</th>
+                            <td>{{$job->qualification}}</td>
+                        </tr>
+                        <tr>
+                            <th>Experience:</th>
+                            <td>{{$job->experience}}</td>
+                        </tr>
+                        <tr>
+                            <th>Application Deadline:</th>
+                            <td>{{$job->application_deadline}}</td>
+                        </tr>
+                        <tr>
+                            <th>Contact Info:</th>
+                            <td>{{$job->contact_info}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    
-        <a href="{{url('/apply-job-form/'.$id)}}" class="btn btn-primary">Apply</a>
+        <div class="text-right">
+          <a href="{{url('/apply-job-form/'.$id)}}" class="btn btn-primary">Apply</a>
+      </div>
     </div>
-    
-  
-    
-    
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    </body>
 </html>

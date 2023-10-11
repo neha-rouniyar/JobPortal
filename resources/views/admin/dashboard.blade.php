@@ -7,24 +7,49 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+          padding: 20px;
+      }
 
+      h1 {
+          margin-bottom: 20px;
+      }
+
+      .btn-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+      }
+
+      .btn-container a {
+          text-decoration: none;
+      }
+
+      .btn {
+          width: 200px;
+      }
+  </style>
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Welcome Admin</h1>
-    <a href="{{url('post-job')}}">
-        <button type="button" class="btn btn-primary">Post a new Job</button>
-    </a>
-    <a href="{{url('view-jobs')}}">
-        <button type="button" class="btn btn-primary">View Jobs</button>
-    </a>
-    <a href="{{url('applicants-list')}}">
-      <button type="button" class="btn btn-primary">Applicants List</button>
-  </a>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="container text-center">
+        <h1>Welcome Admin</h1>
+        <div class="btn-container">
+            <a href="{{url('post-job')}}">
+                <button type="button" class="btn btn-primary">Post a new Job</button>
+            </a>
+            <a href="{{url('view-jobs')}}">
+                <button type="button" class="btn btn-primary">View Jobs</button>
+            </a>
+            <a href="{{url('applicants-list')}}">
+                <button type="button" class="btn btn-primary">Applicants List</button>
+            </a>
+        </div>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
