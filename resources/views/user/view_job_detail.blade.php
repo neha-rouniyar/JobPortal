@@ -32,7 +32,7 @@
   <body>
     <div class="container mt-4">
         <div class="row">
-            <!-- Left Side: Job Details Heading -->
+    
             <div class="col-md-6">
                 <h1 class="section-title">Job Detail Page</h1>
                 <h4 class="job-detail-info">Job Title</h4>
@@ -45,8 +45,6 @@
                 <h4 class="job-detail-info">Application Deadline</h4>
                 <h4 class="job-detail-info">Contact Info</h4>
             </div>
-    
-            <!-- Right Side: Job Details from Controller -->
             <div class="col-md-6">
                 <h1 class="section-title">Job Details</h1>
                 <h4 class="job-detail-info">{{$job->job_title}}</h4>

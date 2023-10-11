@@ -8,16 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-      /* Custom CSS for padding and margin */
       .custom-container {
-          padding: 20px; /* Adjust as needed */
-          margin: 10px; /* Adjust as needed */
-          background-color: #f8f9fa; /* Add a background color */
-          border: 1px solid #ccc; /* Add a border for better separation */
-          border-radius: 5px; /* Add rounded corners */
+          padding: 20px; 
+          margin: 10px; 
+          background-color: #f8f9fa; 
+          border: 1px solid #ccc; 
+          border-radius: 5px; 
       }
-  
-      /* Style for headings */
       .section-title {
           font-size: 24px;
           font-weight: bold;
@@ -32,7 +29,6 @@
   <body>
     <div class="container mt-4">
       <div class="row">
-          <!-- Left Side: Job Details Heading -->
           <div class="col-md-6">
               <h1 class="section-title">Job Detail Page</h1>
               <h4 class="job-detail-info">Job Title</h4>
@@ -45,8 +41,6 @@
               <h4 class="job-detail-info">Application Deadline</h4>
               <h4 class="job-detail-info">Contact Info</h4>
           </div>
-  
-          <!-- Right Side: Job Details from Controller -->
           <div class="col-md-6">
               <h1 class="section-title">Job Details</h1>
               <h4 class="job-detail-info">{{$job->job_title}}</h4>

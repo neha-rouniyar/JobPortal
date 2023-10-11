@@ -8,14 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-        /* Add margin and padding to form elements */
         .form-group {
-          margin-bottom: 15px; /* Adjust as needed */
+          margin-bottom: 15px;
         }
-    
-        /* Add padding to the form itself */
         form {
-          padding: 50px; /* Adjust as needed */
+          padding: 50px;
         }
        
       </style>
