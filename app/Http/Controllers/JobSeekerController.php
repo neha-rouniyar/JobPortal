@@ -13,7 +13,7 @@ class JobSeekerController extends Controller
         $searched_data=$request['search'] ?? "";
         if($searched_data != "")
         {
-            $jobs=Jobs::where('job_title','LIKE','%'.$searched_data.'%')->get();
+            $jobs=Jobs::where('application_deadline','LIKE','%'.$searched_data.'%')->get();
         }else{
             $jobs = Jobs::all();
         }
@@ -34,8 +34,8 @@ class JobSeekerController extends Controller
             'contact' => 'required',
             'education' => 'required',
             'experience' => 'required',
-            // 'cv' => 'required |mimes:pdf,doc,docx'
-            'cv' => 'required'
+            'cv' => 'required |mimes:pdf,doc,docx,png'
+            // 'cv' => 'required'
         ]);
         if ($file = $request->hasFile('cv')) {
             $file = $request->file('cv');

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EncryptTestController;
 use App\Http\Controllers\JobSeekerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -47,11 +48,25 @@ Route::get('/applicants-list', [AdminController::class, 'applicants_list'])->nam
 
 
 
+
 //user
 Route::get('/apply-job-form/{id}', [JobSeekerController::class, 'job_form'])->name('user.job-form');
 Route::post('/submit-job-apply', [JobSeekerController::class, 'apply_job'])->name('user.apply_job');
 Route::get('/search-job', [JobSeekerController::class, 'search_job'])->name('user.search_job');
 Route::get('/view-job-detail-user/{id}', [JobSeekerController::class, 'user_view_job_detail'])->name('user.user_view_job_detail');
+
+
+
+//ecnrypt test routes
+Route::get('/encrypt-signup', [EncryptTestController::class, 'index'])->name('encrypt.index');
+Route::post('/encrypt-signupform', [EncryptTestController::class, 'signup'])->name('encrypt.signup');
+Route::get('/decrypt-loginform', [EncryptTestController::class, 'login'])->name('encrypt.login');
+Route::post('/decrypt-login', [EncryptTestController::class, 'loginconfirm'])->name('encrypt.loginconfirm');
+
+
+
+
+
 
 
 

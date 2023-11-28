@@ -33,7 +33,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Job Title</label>
-            <input type="text" class="form-control" name="job_title" placeholder="Job Title">
+            <input type="text" class="form-control" value="{{old('job_title')}}" name="job_title" placeholder="Job Title">
             @error('job_title')
               <p style="color: red">{{$message}}</p>
             @enderror

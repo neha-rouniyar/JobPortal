@@ -58,10 +58,6 @@ class AdminController extends Controller
     public function applicants_list()
     {
         $applicants=Applicants::with('jobs')->get();
-        $job_id=$applicants->pluck('job_id');
-        $jobTitle=Jobs::whereIn('id',$job_id)->pluck('job_title');
-        // dd($jobTitle);
-        // $job = DB::table('jobs as a')->join('j.id')
         return view('admin.applicants',compact('applicants'));
     }
 }
